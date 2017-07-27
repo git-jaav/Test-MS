@@ -1,0 +1,43 @@
+###Relacionado al despliegue
+
+server:
+  port: ${vcap.application.port:8078}
+
+###Relacionado a Spring - Hibernate
+
+spring:
+
+  profiles: default
+
+  production:
+    active: false
+    
+  dataSource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://10.10.2.2;databaseName=WEB_WF_TRACKING
+    username: local
+    password: local2017
+    
+  jpa:    
+    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    #database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    #generate-ddl= true.hibernate.ejb.interceptor=MyInterceptorClassName
+    
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl      
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        
+
+    properties:
+      hibernate:        
+        current_session_context_class: org.springframework.orm.hibernate4.SpringSessionContext
+        naming_strategy:  org.hibernate.cfg.DefaultNamingStrategy
+        #naming-strategy:  org.hibernate.cfg.ImprovedNamingStrategy        
+            
+                              
+                      
+
+      
