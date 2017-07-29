@@ -21,7 +21,6 @@ public class MSTestConfig {
         return DataSourceBuilder.create().build();
     }
     
-//   
 //    @Bean
 //    //@ConfigurationProperties(prefix="spring.jpa.hibernate.current_session_context_class")
 //    public SessionFactory sessionFactory(HibernateEntityManagerFactory hemf) {
