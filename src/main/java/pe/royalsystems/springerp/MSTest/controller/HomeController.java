@@ -31,7 +31,7 @@ public class HomeController {
         			UtilesCommons.showObjeto(result);	
         		}    			
     		}
-        	return "Hola Mundo! MS - SUCCES";
+        	return "Hola Mundo! MS - SUCCES RRRR";
     	}catch(Exception e){
     		e.printStackTrace();
     		return "Hola Mundo! MS - EXECPTION:: "+e;
